@@ -1,2 +1,15 @@
 ---
-# defaults file for ntp
+# defaults for NTP daemon related variables
+
+# Debian-specific variables defining the package and daemon name
+__ntp_daemon: ntp
+__ntp_package: ntp
+
+
+# Define additional NTP servers
+ntp_additional_servers: []
+
+
+# Allows the clock to be updated when it is way off
+# Useful with VMs where they can be paused and resumed
+ntp_tinker_panic: yes
