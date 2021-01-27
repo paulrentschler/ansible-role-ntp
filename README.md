@@ -1,5 +1,5 @@
-NTP
-===
+paulrentschler.NTP
+==================
 
 Installs and configures the NTP daemon on Ubuntu Linux machines.
 
