@@ -28,7 +28,7 @@ tinker panic 0
 
 {% for ntp_server in ntp_additional_servers %}
 server {{ ntp_server }} iburst burst minpoll 4 maxpoll 10
-{% endif %}
+{% endfor %}
 
 # Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
 # on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
