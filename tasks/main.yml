@@ -2,20 +2,22 @@
 # Install and configure the NTP deamon
 
 - name: ensure NTP daemon is installed
-  package:
+  ansible.builtin.package:
     name: "{{ __ntp_package }}"
     state: present
     update_cache: yes
   become: yes
 
 - name: configure the NTP daemon
-  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  ansible.builtin.template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
   become: yes
   notify:
     - restart ntp
 
 - name: ensure NTP is running and enabled
-  service:
+  ansible.builtin.service:
     name: ntp
     state: started
     enabled: yes
