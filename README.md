@@ -1,6 +1,8 @@
 paulrentschler.NTP
 ==================
 
+[![MIT licensed][mit-badge]][mit-link]
+
 Installs and configures the NTP daemon on Ubuntu Linux machines.
 
 Requirements
@@ -54,10 +56,14 @@ Additional custom NTP servers:
 License
 -------
 
-MIT
+[MIT][mit-link]
 
 
 Author Information
 ------------------
 
 Created by Paul Rentschler in 2021.
+
+
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-link]: https://github.com/paulrentschler/ansible-role-ntp/blob/master/LICENSE
