@@ -15,6 +15,8 @@
   become: yes
   notify:
     - restart ntp
+  tags:
+    - ntp_config
 
 - name: ensure NTP is running and enabled
   ansible.builtin.service:
@@ -22,3 +24,5 @@
     state: started
     enabled: yes
   become: yes
+  tags:
+    - ntp_config
